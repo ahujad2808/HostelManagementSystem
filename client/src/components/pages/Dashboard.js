@@ -8,6 +8,8 @@ import { getCurrentUser } from "../../actions/authActions";
 const student = require("../../img/student.jpg");
 const staff = require("../../img/staff.jpeg");
 const bedRoom = require("../../img/bedroom.jpeg");
+const pay= require("../../img/pay.jpg");
+const att = require("../../img/att.jpg");
 class Dashboard extends Component {
   componentDidMount() {
     if (!this.props.auth.isAuthenticated) {
@@ -53,8 +55,9 @@ class Dashboard extends Component {
               </a>
             </div>
           </div>
+
           <div className="card" style={{ width: "18rem", hover: '', height: '22rem' }}>
-            <img src={staff} className="card-img-top" alt="Attendence" />
+            <img src={att} className="card-img-top" alt="Attendence" />
             <div className="card-body">
               <h5 className="card-title">Attendence</h5>
               <a href="/Attendence">
@@ -63,6 +66,16 @@ class Dashboard extends Component {
             </div>
           </div>
 
+
+          <div className="card" style={{ width: "18rem", hover: '', height: '22rem' }}>
+            <img style={{height:"200px"}} src={pay} className="card-img-top" alt="Cleaning" />
+            <div className="card-body">
+              <h5 className="card-title">Payment</h5>
+              <a href="http://127.0.0.1:5500/HostelManagementSystem/client/src/components/pages/index.html">
+               Pay Your Hostel and Mess Fees
+              </a>
+            </div>
+          </div>
 
         </div>
       </div>
